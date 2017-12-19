@@ -1,0 +1,16 @@
+#
+#	Service unit configuration file
+#
+#	/etc/systemd/system/xdl.service
+#
+
+[Unit]
+Description=XDL Climate Control
+
+[Service]
+Type=simple
+ExecStart=/home/pi/projects/XDL/output/xdld
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
